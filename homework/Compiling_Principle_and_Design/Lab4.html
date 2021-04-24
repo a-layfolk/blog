@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lab4 文法设计实验</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.f7c3d84a.css" as="style"><link rel="preload" href="/blog/assets/js/app.59039e4d.js" as="script"><link rel="preload" href="/blog/assets/js/2.70981f31.js" as="script"><link rel="preload" href="/blog/assets/js/7.feb038e6.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.1cda9b39.js"><link rel="prefetch" href="/blog/assets/js/100.b19400f3.js"><link rel="prefetch" href="/blog/assets/js/101.fe821a94.js"><link rel="prefetch" href="/blog/assets/js/102.27bf82ae.js"><link rel="prefetch" href="/blog/assets/js/103.95fa8186.js"><link rel="prefetch" href="/blog/assets/js/104.70d20f12.js"><link rel="prefetch" href="/blog/assets/js/105.49a03984.js"><link rel="prefetch" href="/blog/assets/js/106.f80934a9.js"><link rel="prefetch" href="/blog/assets/js/107.4f710965.js"><link rel="prefetch" href="/blog/assets/js/108.ecd6beb7.js"><link rel="prefetch" href="/blog/assets/js/109.bf4117ef.js"><link rel="prefetch" href="/blog/assets/js/11.52f8b1c2.js"><link rel="prefetch" href="/blog/assets/js/110.470d6075.js"><link rel="prefetch" href="/blog/assets/js/111.9fbcc3ab.js"><link rel="prefetch" href="/blog/assets/js/112.0973da2f.js"><link rel="prefetch" href="/blog/assets/js/113.6c578856.js"><link rel="prefetch" href="/blog/assets/js/114.e39f40b5.js"><link rel="prefetch" href="/blog/assets/js/115.f3e2f72e.js"><link rel="prefetch" href="/blog/assets/js/116.68405de6.js"><link rel="prefetch" href="/blog/assets/js/117.1fe8b141.js"><link rel="prefetch" href="/blog/assets/js/118.b3cbe5c4.js"><link rel="prefetch" href="/blog/assets/js/119.cb707ebb.js"><link rel="prefetch" href="/blog/assets/js/12.b1331a72.js"><link rel="prefetch" href="/blog/assets/js/120.969be4a2.js"><link rel="prefetch" href="/blog/assets/js/121.7dc3843a.js"><link rel="prefetch" href="/blog/assets/js/122.52a93c2f.js"><link rel="prefetch" href="/blog/assets/js/123.3142b0eb.js"><link rel="prefetch" href="/blog/assets/js/124.68e98394.js"><link rel="prefetch" href="/blog/assets/js/125.a5acd3f9.js"><link rel="prefetch" href="/blog/assets/js/126.0f2ebb49.js"><link rel="prefetch" href="/blog/assets/js/127.6ebba3e7.js"><link rel="prefetch" href="/blog/assets/js/128.b727a688.js"><link rel="prefetch" href="/blog/assets/js/129.452c54b2.js"><link rel="prefetch" href="/blog/assets/js/13.f9c879e7.js"><link rel="prefetch" href="/blog/assets/js/130.985d70bd.js"><link rel="prefetch" href="/blog/assets/js/131.efcbece4.js"><link rel="prefetch" href="/blog/assets/js/132.3f72535e.js"><link rel="prefetch" href="/blog/assets/js/133.9dabbc56.js"><link rel="prefetch" href="/blog/assets/js/134.b5918c83.js"><link rel="prefetch" href="/blog/assets/js/135.277595e0.js"><link rel="prefetch" href="/blog/assets/js/136.deaa29d0.js"><link rel="prefetch" href="/blog/assets/js/137.915dc793.js"><link rel="prefetch" href="/blog/assets/js/138.aca16f18.js"><link rel="prefetch" href="/blog/assets/js/139.cbdd6903.js"><link rel="prefetch" href="/blog/assets/js/14.0061916c.js"><link rel="prefetch" href="/blog/assets/js/140.ae963501.js"><link rel="prefetch" href="/blog/assets/js/141.974a956f.js"><link rel="prefetch" href="/blog/assets/js/142.906139a3.js"><link rel="prefetch" href="/blog/assets/js/143.f17f3540.js"><link rel="prefetch" href="/blog/assets/js/144.59e865f0.js"><link rel="prefetch" href="/blog/assets/js/145.4130b004.js"><link rel="prefetch" href="/blog/assets/js/146.fa1b0871.js"><link rel="prefetch" href="/blog/assets/js/147.4ea27ea5.js"><link rel="prefetch" href="/blog/assets/js/148.3b04d15d.js"><link rel="prefetch" href="/blog/assets/js/149.660b8d6e.js"><link rel="prefetch" href="/blog/assets/js/15.44d2beb6.js"><link rel="prefetch" href="/blog/assets/js/150.c049ee9a.js"><link rel="prefetch" href="/blog/assets/js/151.c6582d7e.js"><link rel="prefetch" href="/blog/assets/js/152.fed7a43b.js"><link rel="prefetch" href="/blog/assets/js/153.5b11c0be.js"><link rel="prefetch" href="/blog/assets/js/154.475108b5.js"><link rel="prefetch" href="/blog/assets/js/155.8ce1fda2.js"><link rel="prefetch" href="/blog/assets/js/156.2c866c00.js"><link rel="prefetch" href="/blog/assets/js/157.224c630a.js"><link rel="prefetch" href="/blog/assets/js/158.d211d417.js"><link rel="prefetch" href="/blog/assets/js/159.071e3085.js"><link rel="prefetch" href="/blog/assets/js/16.a4cb60be.js"><link rel="prefetch" href="/blog/assets/js/160.eec96231.js"><link rel="prefetch" href="/blog/assets/js/161.68f93f11.js"><link rel="prefetch" href="/blog/assets/js/162.b4ce98d1.js"><link rel="prefetch" href="/blog/assets/js/163.6e78fb8c.js"><link rel="prefetch" href="/blog/assets/js/164.20b49bc8.js"><link rel="prefetch" href="/blog/assets/js/165.cd8f7b24.js"><link rel="prefetch" href="/blog/assets/js/166.272c7c9c.js"><link rel="prefetch" href="/blog/assets/js/167.0bd26ec6.js"><link rel="prefetch" href="/blog/assets/js/168.333d08df.js"><link rel="prefetch" href="/blog/assets/js/17.d38ea754.js"><link rel="prefetch" href="/blog/assets/js/18.96dbb8dc.js"><link rel="prefetch" href="/blog/assets/js/19.6caaaee3.js"><link rel="prefetch" href="/blog/assets/js/20.217ebc8b.js"><link rel="prefetch" href="/blog/assets/js/21.48ce83c3.js"><link rel="prefetch" href="/blog/assets/js/22.c0d3e59e.js"><link rel="prefetch" href="/blog/assets/js/23.93fd6432.js"><link rel="prefetch" href="/blog/assets/js/24.ef340c6c.js"><link rel="prefetch" href="/blog/assets/js/25.12e59096.js"><link rel="prefetch" href="/blog/assets/js/26.9fc77d6c.js"><link rel="prefetch" href="/blog/assets/js/27.ec933612.js"><link rel="prefetch" href="/blog/assets/js/28.2ebbde2d.js"><link rel="prefetch" href="/blog/assets/js/29.37beb5ff.js"><link rel="prefetch" href="/blog/assets/js/3.7b49b0b0.js"><link rel="prefetch" href="/blog/assets/js/30.ef7be351.js"><link rel="prefetch" href="/blog/assets/js/31.53cf9537.js"><link rel="prefetch" href="/blog/assets/js/32.42f63ccc.js"><link rel="prefetch" href="/blog/assets/js/33.33c1a66b.js"><link rel="prefetch" href="/blog/assets/js/34.2320ec6c.js"><link rel="prefetch" href="/blog/assets/js/35.bcb8907a.js"><link rel="prefetch" href="/blog/assets/js/36.f13d82b2.js"><link rel="prefetch" href="/blog/assets/js/37.075393bf.js"><link rel="prefetch" href="/blog/assets/js/38.249cd003.js"><link rel="prefetch" href="/blog/assets/js/39.759564e4.js"><link rel="prefetch" href="/blog/assets/js/4.affafbc6.js"><link rel="prefetch" href="/blog/assets/js/40.b2510398.js"><link rel="prefetch" href="/blog/assets/js/41.d69b2517.js"><link rel="prefetch" href="/blog/assets/js/42.fc2d6374.js"><link rel="prefetch" href="/blog/assets/js/43.818885f6.js"><link rel="prefetch" href="/blog/assets/js/44.ca548433.js"><link rel="prefetch" href="/blog/assets/js/45.74cb05c1.js"><link rel="prefetch" href="/blog/assets/js/46.fa305a61.js"><link rel="prefetch" href="/blog/assets/js/47.f13b4e9f.js"><link rel="prefetch" href="/blog/assets/js/48.79d38fd2.js"><link rel="prefetch" href="/blog/assets/js/49.294f2069.js"><link rel="prefetch" href="/blog/assets/js/5.1824bac4.js"><link rel="prefetch" href="/blog/assets/js/50.bf1f8256.js"><link rel="prefetch" href="/blog/assets/js/51.a13612ea.js"><link rel="prefetch" href="/blog/assets/js/52.8b84ed36.js"><link rel="prefetch" href="/blog/assets/js/53.9224c766.js"><link rel="prefetch" href="/blog/assets/js/54.cb8e76d9.js"><link rel="prefetch" href="/blog/assets/js/55.ea9c8471.js"><link rel="prefetch" href="/blog/assets/js/56.041ae37f.js"><link rel="prefetch" href="/blog/assets/js/57.8f36c0a1.js"><link rel="prefetch" href="/blog/assets/js/58.8d58204d.js"><link rel="prefetch" href="/blog/assets/js/59.270f9527.js"><link rel="prefetch" href="/blog/assets/js/6.d5b7f992.js"><link rel="prefetch" href="/blog/assets/js/60.a0db7ea7.js"><link rel="prefetch" href="/blog/assets/js/61.7ecc437f.js"><link rel="prefetch" href="/blog/assets/js/62.451735c6.js"><link rel="prefetch" href="/blog/assets/js/63.7da1c072.js"><link rel="prefetch" href="/blog/assets/js/64.c69d0c37.js"><link rel="prefetch" href="/blog/assets/js/65.99854ffd.js"><link rel="prefetch" href="/blog/assets/js/66.e3672356.js"><link rel="prefetch" href="/blog/assets/js/67.89ee9582.js"><link rel="prefetch" href="/blog/assets/js/68.fcb3a6e2.js"><link rel="prefetch" href="/blog/assets/js/69.f75c9878.js"><link rel="prefetch" href="/blog/assets/js/70.53926bfd.js"><link rel="prefetch" href="/blog/assets/js/71.01a17461.js"><link rel="prefetch" href="/blog/assets/js/72.addbc1be.js"><link rel="prefetch" href="/blog/assets/js/73.a4d57497.js"><link rel="prefetch" href="/blog/assets/js/74.5c9aacea.js"><link rel="prefetch" href="/blog/assets/js/75.caec8feb.js"><link rel="prefetch" href="/blog/assets/js/76.7a328c07.js"><link rel="prefetch" href="/blog/assets/js/77.74ed5331.js"><link rel="prefetch" href="/blog/assets/js/78.3c8f8e91.js"><link rel="prefetch" href="/blog/assets/js/79.0f262cba.js"><link rel="prefetch" href="/blog/assets/js/8.75e247f9.js"><link rel="prefetch" href="/blog/assets/js/80.c5307bbc.js"><link rel="prefetch" href="/blog/assets/js/81.733bc4f8.js"><link rel="prefetch" href="/blog/assets/js/82.cfde5b4a.js"><link rel="prefetch" href="/blog/assets/js/83.7b6205e7.js"><link rel="prefetch" href="/blog/assets/js/84.1a525c77.js"><link rel="prefetch" href="/blog/assets/js/85.6fd607ae.js"><link rel="prefetch" href="/blog/assets/js/86.354fab86.js"><link rel="prefetch" href="/blog/assets/js/87.6549d78e.js"><link rel="prefetch" href="/blog/assets/js/88.24897f77.js"><link rel="prefetch" href="/blog/assets/js/89.ddb34bb7.js"><link rel="prefetch" href="/blog/assets/js/9.97fe452c.js"><link rel="prefetch" href="/blog/assets/js/90.26a15279.js"><link rel="prefetch" href="/blog/assets/js/91.6a4e0f9a.js"><link rel="prefetch" href="/blog/assets/js/92.8395cb0f.js"><link rel="prefetch" href="/blog/assets/js/93.50a85a3c.js"><link rel="prefetch" href="/blog/assets/js/94.77e4c8db.js"><link rel="prefetch" href="/blog/assets/js/95.d563d2f1.js"><link rel="prefetch" href="/blog/assets/js/96.58d54dd3.js"><link rel="prefetch" href="/blog/assets/js/97.71efdc1f.js"><link rel="prefetch" href="/blog/assets/js/98.68944b0a.js"><link rel="prefetch" href="/blog/assets/js/99.b102843d.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.f7c3d84a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/bamboo.svg" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/The_Definative_Guide_of_CSS/" class="nav-link">
+  CSS 权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/CSS_Supplement/" class="nav-link">
+  CSS 补充
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/Vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/WeChat/" class="nav-link">
+  WeChat
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/backend/Explain_Profound_Theories_in_Simple_Language/" class="nav-link">
+  深入浅出 node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教课书" class="dropdown-title"><span class="title">教课书</span> <span class="arrow down"></span></button> <button type="button" aria-label="教课书" class="mobile-dropdown-title"><span class="title">教课书</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Compiling_Principle_and_Design/" class="nav-link">
+  编译原理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Software_Engineering/" class="nav-link">
+  软件工程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/The_Interest_Study_guide_of_Haskell/" class="nav-link">
+  Haskell 趣学指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Assembly_Language_and_Interface_Techniques/" class="nav-link">
+  汇编技术与接口
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Computer_Architecture/" class="nav-link">
+  计算机体系结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/tools/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/courseware/" class="nav-link">
+  课件
+</a></div><div class="nav-item"><a href="/blog/tmp/" class="nav-link">
+  编译原理实验五
+</a></div> <a href="https://github.com/a-layfolk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/The_Definative_Guide_of_CSS/" class="nav-link">
+  CSS 权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/CSS_Supplement/" class="nav-link">
+  CSS 补充
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/Vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/WeChat/" class="nav-link">
+  WeChat
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/backend/Explain_Profound_Theories_in_Simple_Language/" class="nav-link">
+  深入浅出 node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教课书" class="dropdown-title"><span class="title">教课书</span> <span class="arrow down"></span></button> <button type="button" aria-label="教课书" class="mobile-dropdown-title"><span class="title">教课书</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Compiling_Principle_and_Design/" class="nav-link">
+  编译原理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Software_Engineering/" class="nav-link">
+  软件工程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/The_Interest_Study_guide_of_Haskell/" class="nav-link">
+  Haskell 趣学指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Assembly_Language_and_Interface_Techniques/" class="nav-link">
+  汇编技术与接口
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Computer_Architecture/" class="nav-link">
+  计算机体系结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/tools/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/courseware/" class="nav-link">
+  课件
+</a></div><div class="nav-item"><a href="/blog/tmp/" class="nav-link">
+  编译原理实验五
+</a></div> <a href="https://github.com/a-layfolk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/blog/homework/Compiling_Principle_and_Design/" aria-current="page" class="sidebar-link">编译原理与设计实验</a></li><li><a href="/blog/homework/Compiling_Principle_and_Design/Lab1.html" class="sidebar-link">Lab 1. 程序设计语言认知实验</a></li><li><a href="/blog/homework/Compiling_Principle_and_Design/Lab2.html" class="sidebar-link">Lab 2. 编译器认知实验</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="lab4-文法设计实验"><a href="#lab4-文法设计实验" class="header-anchor">#</a> Lab4 文法设计实验</h1> <h2 id="_1-实验目的和内容"><a href="#_1-实验目的和内容" class="header-anchor">#</a> 1. 实验目的和内容</h2> <p><strong>实验目的</strong>:</p> <ul><li>了解程序设计语言的演化</li> <li>了解相关标准的制定过程</li> <li>深入理解与编译实现的有关形式语言理论</li> <li>使用文法对给定语言进行描述</li> <li>为词法分析和语法分析做准备</li></ul> <p><strong>实验内容</strong>:</p> <ul><li><p>阅读提供的 C 语言和 Java 语言规范草稿，了解语言规范化定义应包括的具体内容</p></li> <li><p>选定 C 语言子集，并使用 BNF 表示方法文法进行描述，要求至少包括表达式、赋值语句、分支语句和循环语句；或者设计一个新的程序设计语言，并使用文法对该语言的词法规则和语法规则进行描述。</p> <p>以上语言定义首先要给出所使用的字母表，在此基础上使用 2 型文法描述语法规则。</p></li></ul> <h2 id="_2-语言规范理解"><a href="#_2-语言规范理解" class="header-anchor">#</a> 2. 语言规范理解</h2> <p>在附件 C11-n1570 xvii 页的 Introduction 中，有：</p> <table><thead><tr><th>原文</th> <th>译文</th></tr></thead> <tbody><tr><td>This International Standard is divided into four major subdivisions:<br>— preliminary elements (clauses 1−4);<br>— the characteristics of environments that translate and execute C programs (clause 5);<br>— the language syntax, constraints, and semantics (clause 6);<br>— the library facilities (clause 7).</td> <td>此国际标准分为四个主要部分：<br>— 初步要素（第 1-4 条）<br>— 翻译和执行 C 语言程序的环境特性（第 5 条）<br>— 语言语法、约束和语言（第 6 条）<br>— 库设置（第 7 条）</td></tr></tbody></table> <p>而在附件 jls12.pdf 的 Introduction 中，有</p> <table><thead><tr><th>原文</th> <th>译文</th></tr></thead> <tbody><tr><td>Chapter 2 describes grammars and the notation used to present the lexical and syntactic grammars for the language.<br>Chapter 3 describes the lexical structure of the Java programming language, which is based on C and C++.<br>......<br>Chapter 4 describes types, values, and variables. Types are subdivided into primitive types and reference types.<br>......</td> <td>第 2 章描述了语法，表示语言语法和句法语法的符号。<br>第 3 章介绍了基于 C 和 C++ 的 Java 程序设计语言的词法结构。<br>……<br>第 4 章描述了类型、值和变量。类型细分为基本类型和引用类型。<br>……</td></tr></tbody></table> <p>从两种语言的规范中，可以看出要想设计出一门语言，必须对这么语言中包括的单词、语法、句法这些都做出详尽的规定。</p> <h2 id="_3-语言文法设计报告"><a href="#_3-语言文法设计报告" class="header-anchor">#</a> 3. 语言文法设计报告</h2> <h3 id="_3-1-单词表"><a href="#_3-1-单词表" class="header-anchor">#</a> 3.1 单词表</h3> <p>首先给出单词表，这里给出的单词表在 Lab3 中使用过。左边会给出单词表，右边会着重给出之后 BNF 分析时要用到的单词。</p> <table><thead><tr><th>Lab3 的单词定义</th> <th>之后要使用的单词</th></tr></thead> <tbody><tr><td><img src="/blog/assets/img/token_keyword.bb7120a5.jpg" style="zoom:50%;"></td> <td>break char continue default do else for goto if int long return short switch unsigned void while</td></tr> <tr><td><img src="/blog/assets/img/token_identifier.9ffe1cb5.jpg" style="zoom:50%;"></td> <td>identifier</td></tr> <tr><td><img src="/blog/assets/img/token_integer_constant.8e0f592f.jpg" style="zoom:50%;"></td> <td>integer-constant decimal-constant</td></tr> <tr><td><img src="/blog/assets/img/token_floating_constant.8bbb60ff.jpg" style="zoom:50%;"></td> <td>floating-constant</td></tr> <tr><td><img src="/blog/assets/img/token_character_constant.7caa77d6.jpg" style="zoom:50%;"></td> <td>character-constant</td></tr> <tr><td><img src="/blog/assets/img/token_string_literal.b4ff89a9.jpg" style="zoom:50%;"></td> <td>string-literal</td></tr> <tr><td><img src="/blog/assets/img/token_defualt.106ff759.jpg" style="zoom:50%;"></td> <td>运算符和界限符</td></tr></tbody></table> <h3 id="_3-2-bnf-描述文法"><a href="#_3-2-bnf-描述文法" class="header-anchor">#</a> 3.2 BNF 描述文法</h3> <p>现在给出 BNF 描述文法，首先给出整体的轮廓，然后层层下推。</p> <div class="language- extra-class"><pre class="language-text"><code>statement ::= expression-stmt
+              | assignment-stmt
+              | selection-stmt
+              | iteration-stmt
+              | transfer-stmt
+              | label-stmt
+</code></pre></div><p>C 语言中的语句包括：表达式语句、赋值语句、分支语句、循环语句、跳转语句和标记语句。</p> <p>这里我把 switch case 语句中的 case 和 default 语句称为标记语句。</p> <p>此外，和语句有些差别的是声明，比如变量声明和函数声明。</p> <h4 id="_3-2-1-表达式语句"><a href="#_3-2-1-表达式语句" class="header-anchor">#</a> 3.2.1 表达式语句</h4> <ul><li><p>1 表达式语句由表达式后接分号组成</p> <div class="language- extra-class"><pre class="language-text"><code>expression-stmt ::= expression ;
+</code></pre></div></li> <li><p>1 表达式 expression 一般就是算术运算和比较运算</p> <div class="language- extra-class"><pre class="language-text"><code>expression ::= arithmetic-expression
+               | arithmetic-expression com-op arithmetic-expression
+</code></pre></div></li> <li><p>1-1 算术运算包括加减运算和乘除运算</p> <div class="language- extra-class"><pre class="language-text"><code>arithmetic-expression ::= add-sub-expression
+                          | mul-div-expression
+</code></pre></div></li> <li><p>1-1-1 其中，加减运算中的某一项或几项可能是乘除运算</p> <div class="language- extra-class"><pre class="language-text"><code>add-sub-expression ::= factor
+                       | add-sub-expression add-sub-op add-sub-expression
+                       | add-sub-expression add-sub-op mul-div-expression
+                       | mul-div-expression add-sub-op add-sub-expression
+                       | mul-div-expression add-sub-op mul-div-expression
+</code></pre></div></li> <li><p>1-1-1-1 factor 表示参与运算的元素，包括整型常量、浮点数型常量、变量、表达式。其中整型常量、浮点数型常量在字母表中已经定义</p> <div class="language- extra-class"><pre class="language-text"><code>factor ::= integer-constant
+           | floating-constant
+           | var
+           | ( expression )
+</code></pre></div></li> <li><p>1-1-1-1-1 变量则可以是标识符或者数组，其中 identifier 和 decimal-constant 在字母表中已经定义</p> <div class="language- extra-class"><pre class="language-text"><code>var ::= identifier
+        | identifier [ decimal-constant ]
+</code></pre></div></li> <li><p>1-1-1-2 add-sub-op 则就是简单的 + 和 -</p> <div class="language- extra-class"><pre class="language-text"><code>add-sub-op ::= + | -
+</code></pre></div></li> <li><p>1-1-2 乘除运算中的某一项也可能是加减运算</p> <div class="language- extra-class"><pre class="language-text"><code>mul-div-expression ::= factor
+                     | add-sub-expression mul-div-op add-sub-expression
+                     | add-sub-expression mul-div-op mul-div-expression
+                     | mul-div-expression mul-div-op add-sub-expression
+                     | mul-div-expression mul-div-op mul-div-expression
+</code></pre></div></li> <li><p>1-1-2-1 factor 之前已经定义过，mul-div-op 就是简单的 * 和 /</p> <div class="language- extra-class"><pre class="language-text"><code>mul-div-op ::= * | /
+</code></pre></div></li> <li><p>2 com-op 比较运算符</p> <div class="language- extra-class"><pre class="language-text"><code>com-op ::= &lt;=
+           | &lt;
+           | &gt;
+           | &gt;=
+           | ==
+           | !=
+</code></pre></div></li></ul> <h4 id="_3-2-2-赋值语句"><a href="#_3-2-2-赋值语句" class="header-anchor">#</a> 3.2.2 赋值语句</h4> <ul><li><p>赋值语句中，var 和 expression 之前已经定义过了，主要看 ass-op</p> <div class="language- extra-class"><pre class="language-text"><code>assignment-stmt ::= var ass-op expression ;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>ass-op ::= =
+           | +=
+           | -=
+           | *=
+           | /=
+           | %=
+           | &lt;&lt;=
+           | &gt;&gt;=
+           | &amp;=
+           | |=
+           | ^=
+</code></pre></div></li></ul> <h4 id="_3-2-3-分支语句"><a href="#_3-2-3-分支语句" class="header-anchor">#</a> 3.2.3 分支语句</h4> <ul><li><p>分支语句包括 if，if else 和 switch 分支</p> <div class="language- extra-class"><pre class="language-text"><code>selection-stmt ::= if ( expression ) { statement }
+                   | if ( expression ) { statement } else { statement }
+                   | switch ( expression ) { statement }
+</code></pre></div></li></ul> <h4 id="_3-2-4-循环语句"><a href="#_3-2-4-循环语句" class="header-anchor">#</a> 3.2.4 循环语句</h4> <ul><li><p>循环语句包括 while，do while 和 for 循环</p> <div class="language- extra-class"><pre class="language-text"><code>iteration-stmt ::= while ( expression ) { statement }
+                   | do { statement } while ( expression ) ;
+                   | iteration-for
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>iteration-for ::= for ( expression ; expression ; expression ) { statement }
+</code></pre></div></li></ul> <h4 id="_3-2-5-跳转语句"><a href="#_3-2-5-跳转语句" class="header-anchor">#</a> 3.2.5 跳转语句</h4> <ul><li><p>跳转语句包括 goto，break，continue 和 return 语句</p> <div class="language- extra-class"><pre class="language-text"><code>transfer-stmt ::= goto identifier ;
+                  | continue ;
+                  | break ;
+                  | return-stmt
+</code></pre></div><p>返回语句要么为 return ; （函数返回值为空时）要么为 return expression</p> <div class="language- extra-class"><pre class="language-text"><code>return-stmt ::= return ;
+                | return expression ;
+</code></pre></div></li></ul> <h4 id="_3-2-6-标记语句"><a href="#_3-2-6-标记语句" class="header-anchor">#</a> 3.2.6 标记语句</h4> <ul><li><p>标记语句主要就包括两个，一个 case，一个 default</p> <div class="language- extra-class"><pre class="language-text"><code>lable-stmt ::= case integer-constant : statement
+               | case floating-constant : statement
+               | case character-constant : statement
+               | default : statement
+</code></pre></div></li></ul> <h4 id="_3-2-7-声明"><a href="#_3-2-7-声明" class="header-anchor">#</a> 3.2.7 声明</h4> <ul><li><p>1 声明包括变量声明和函数声明</p> <div class="language- extra-class"><pre class="language-text"><code>declaration ::= var-declaration
+                | fun-declaration
+</code></pre></div></li> <li><p>1-1 变量声明比较简单</p> <div class="language- extra-class"><pre class="language-text"><code>var-declaration ::= type-specifier identifier ;
+                    | type-specifier identifier [ decimal-constant ]
+</code></pre></div></li> <li><p>1-1-1 其中，变量标识符是许多个关键字</p> <div class="language- extra-class"><pre class="language-text"><code>type-specifier ::= char
+                   |double
+                   |float
+                   |int
+                   |long
+                   |short
+                   |signed
+                   |unsigned
+                   |void
+</code></pre></div></li> <li><p>1-2 函数声明会包括变量标识符，identifier，还有参数，以及函数体</p> <div class="language- extra-class"><pre class="language-text"><code>fun-declaration ::= type-specifier identifier ( params );
+</code></pre></div></li> <li><p>1-2-1 参数的定义比较复杂，有可能有一个、多个参数，也可能为空</p> <div class="language- extra-class"><pre class="language-text"><code>params ::= param-list
+           | void
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>params-list ::= param
+                | params-list , param
+</code></pre></div><p>参数不仅可能是变量，也可能是数组</p> <div class="language- extra-class"><pre class="language-text"><code>param ::= type-specifier identifier
+          | type-specifier identifier [ ]
+</code></pre></div></li></ul> <h2 id="_4-实验心得体会"><a href="#_4-实验心得体会" class="header-anchor">#</a> 4. 实验心得体会</h2> <p>我认为本次实验，完成比较简单，但是想要完整的标识却比较困难。比如我给出的变量标识符为：</p> <div class="language- extra-class"><pre class="language-text"><code>type-specifier ::= char
+                   |double
+                   |float
+                   |int
+                   |long
+                   |short
+                   |signed
+                   |unsigned
+                   |void
+</code></pre></div><p>但事实上，C 语言中变量标识符还有 struct，union，enum 和 typedef 等。</p> <p>如果这些标识符用于声明 C 语言的变量，真正需要完整考虑的话，还应该注意 const 和 volatile 修饰符。此外，虽然变量我已经将数组考虑了进去，但并没有将指针考虑进去，且如果真正深入考虑的话，除了一维数组还有多维数组等需要考虑。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.59039e4d.js" defer></script><script src="/blog/assets/js/2.70981f31.js" defer></script><script src="/blog/assets/js/7.feb038e6.js" defer></script>
+  </body>
+</html>

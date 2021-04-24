@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lab5 语法分析实验</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.f7c3d84a.css" as="style"><link rel="preload" href="/blog/assets/js/app.59039e4d.js" as="script"><link rel="preload" href="/blog/assets/js/2.70981f31.js" as="script"><link rel="preload" href="/blog/assets/js/38.249cd003.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.1cda9b39.js"><link rel="prefetch" href="/blog/assets/js/100.b19400f3.js"><link rel="prefetch" href="/blog/assets/js/101.fe821a94.js"><link rel="prefetch" href="/blog/assets/js/102.27bf82ae.js"><link rel="prefetch" href="/blog/assets/js/103.95fa8186.js"><link rel="prefetch" href="/blog/assets/js/104.70d20f12.js"><link rel="prefetch" href="/blog/assets/js/105.49a03984.js"><link rel="prefetch" href="/blog/assets/js/106.f80934a9.js"><link rel="prefetch" href="/blog/assets/js/107.4f710965.js"><link rel="prefetch" href="/blog/assets/js/108.ecd6beb7.js"><link rel="prefetch" href="/blog/assets/js/109.bf4117ef.js"><link rel="prefetch" href="/blog/assets/js/11.52f8b1c2.js"><link rel="prefetch" href="/blog/assets/js/110.470d6075.js"><link rel="prefetch" href="/blog/assets/js/111.9fbcc3ab.js"><link rel="prefetch" href="/blog/assets/js/112.0973da2f.js"><link rel="prefetch" href="/blog/assets/js/113.6c578856.js"><link rel="prefetch" href="/blog/assets/js/114.e39f40b5.js"><link rel="prefetch" href="/blog/assets/js/115.f3e2f72e.js"><link rel="prefetch" href="/blog/assets/js/116.68405de6.js"><link rel="prefetch" href="/blog/assets/js/117.1fe8b141.js"><link rel="prefetch" href="/blog/assets/js/118.b3cbe5c4.js"><link rel="prefetch" href="/blog/assets/js/119.cb707ebb.js"><link rel="prefetch" href="/blog/assets/js/12.b1331a72.js"><link rel="prefetch" href="/blog/assets/js/120.969be4a2.js"><link rel="prefetch" href="/blog/assets/js/121.7dc3843a.js"><link rel="prefetch" href="/blog/assets/js/122.52a93c2f.js"><link rel="prefetch" href="/blog/assets/js/123.3142b0eb.js"><link rel="prefetch" href="/blog/assets/js/124.68e98394.js"><link rel="prefetch" href="/blog/assets/js/125.a5acd3f9.js"><link rel="prefetch" href="/blog/assets/js/126.0f2ebb49.js"><link rel="prefetch" href="/blog/assets/js/127.6ebba3e7.js"><link rel="prefetch" href="/blog/assets/js/128.b727a688.js"><link rel="prefetch" href="/blog/assets/js/129.452c54b2.js"><link rel="prefetch" href="/blog/assets/js/13.f9c879e7.js"><link rel="prefetch" href="/blog/assets/js/130.985d70bd.js"><link rel="prefetch" href="/blog/assets/js/131.efcbece4.js"><link rel="prefetch" href="/blog/assets/js/132.3f72535e.js"><link rel="prefetch" href="/blog/assets/js/133.9dabbc56.js"><link rel="prefetch" href="/blog/assets/js/134.b5918c83.js"><link rel="prefetch" href="/blog/assets/js/135.277595e0.js"><link rel="prefetch" href="/blog/assets/js/136.deaa29d0.js"><link rel="prefetch" href="/blog/assets/js/137.915dc793.js"><link rel="prefetch" href="/blog/assets/js/138.aca16f18.js"><link rel="prefetch" href="/blog/assets/js/139.cbdd6903.js"><link rel="prefetch" href="/blog/assets/js/14.0061916c.js"><link rel="prefetch" href="/blog/assets/js/140.ae963501.js"><link rel="prefetch" href="/blog/assets/js/141.974a956f.js"><link rel="prefetch" href="/blog/assets/js/142.906139a3.js"><link rel="prefetch" href="/blog/assets/js/143.f17f3540.js"><link rel="prefetch" href="/blog/assets/js/144.59e865f0.js"><link rel="prefetch" href="/blog/assets/js/145.4130b004.js"><link rel="prefetch" href="/blog/assets/js/146.fa1b0871.js"><link rel="prefetch" href="/blog/assets/js/147.4ea27ea5.js"><link rel="prefetch" href="/blog/assets/js/148.3b04d15d.js"><link rel="prefetch" href="/blog/assets/js/149.660b8d6e.js"><link rel="prefetch" href="/blog/assets/js/15.44d2beb6.js"><link rel="prefetch" href="/blog/assets/js/150.c049ee9a.js"><link rel="prefetch" href="/blog/assets/js/151.c6582d7e.js"><link rel="prefetch" href="/blog/assets/js/152.fed7a43b.js"><link rel="prefetch" href="/blog/assets/js/153.5b11c0be.js"><link rel="prefetch" href="/blog/assets/js/154.475108b5.js"><link rel="prefetch" href="/blog/assets/js/155.8ce1fda2.js"><link rel="prefetch" href="/blog/assets/js/156.2c866c00.js"><link rel="prefetch" href="/blog/assets/js/157.224c630a.js"><link rel="prefetch" href="/blog/assets/js/158.d211d417.js"><link rel="prefetch" href="/blog/assets/js/159.071e3085.js"><link rel="prefetch" href="/blog/assets/js/16.a4cb60be.js"><link rel="prefetch" href="/blog/assets/js/160.eec96231.js"><link rel="prefetch" href="/blog/assets/js/161.68f93f11.js"><link rel="prefetch" href="/blog/assets/js/162.b4ce98d1.js"><link rel="prefetch" href="/blog/assets/js/163.6e78fb8c.js"><link rel="prefetch" href="/blog/assets/js/164.20b49bc8.js"><link rel="prefetch" href="/blog/assets/js/165.cd8f7b24.js"><link rel="prefetch" href="/blog/assets/js/166.272c7c9c.js"><link rel="prefetch" href="/blog/assets/js/167.0bd26ec6.js"><link rel="prefetch" href="/blog/assets/js/168.333d08df.js"><link rel="prefetch" href="/blog/assets/js/17.d38ea754.js"><link rel="prefetch" href="/blog/assets/js/18.96dbb8dc.js"><link rel="prefetch" href="/blog/assets/js/19.6caaaee3.js"><link rel="prefetch" href="/blog/assets/js/20.217ebc8b.js"><link rel="prefetch" href="/blog/assets/js/21.48ce83c3.js"><link rel="prefetch" href="/blog/assets/js/22.c0d3e59e.js"><link rel="prefetch" href="/blog/assets/js/23.93fd6432.js"><link rel="prefetch" href="/blog/assets/js/24.ef340c6c.js"><link rel="prefetch" href="/blog/assets/js/25.12e59096.js"><link rel="prefetch" href="/blog/assets/js/26.9fc77d6c.js"><link rel="prefetch" href="/blog/assets/js/27.ec933612.js"><link rel="prefetch" href="/blog/assets/js/28.2ebbde2d.js"><link rel="prefetch" href="/blog/assets/js/29.37beb5ff.js"><link rel="prefetch" href="/blog/assets/js/3.7b49b0b0.js"><link rel="prefetch" href="/blog/assets/js/30.ef7be351.js"><link rel="prefetch" href="/blog/assets/js/31.53cf9537.js"><link rel="prefetch" href="/blog/assets/js/32.42f63ccc.js"><link rel="prefetch" href="/blog/assets/js/33.33c1a66b.js"><link rel="prefetch" href="/blog/assets/js/34.2320ec6c.js"><link rel="prefetch" href="/blog/assets/js/35.bcb8907a.js"><link rel="prefetch" href="/blog/assets/js/36.f13d82b2.js"><link rel="prefetch" href="/blog/assets/js/37.075393bf.js"><link rel="prefetch" href="/blog/assets/js/39.759564e4.js"><link rel="prefetch" href="/blog/assets/js/4.affafbc6.js"><link rel="prefetch" href="/blog/assets/js/40.b2510398.js"><link rel="prefetch" href="/blog/assets/js/41.d69b2517.js"><link rel="prefetch" href="/blog/assets/js/42.fc2d6374.js"><link rel="prefetch" href="/blog/assets/js/43.818885f6.js"><link rel="prefetch" href="/blog/assets/js/44.ca548433.js"><link rel="prefetch" href="/blog/assets/js/45.74cb05c1.js"><link rel="prefetch" href="/blog/assets/js/46.fa305a61.js"><link rel="prefetch" href="/blog/assets/js/47.f13b4e9f.js"><link rel="prefetch" href="/blog/assets/js/48.79d38fd2.js"><link rel="prefetch" href="/blog/assets/js/49.294f2069.js"><link rel="prefetch" href="/blog/assets/js/5.1824bac4.js"><link rel="prefetch" href="/blog/assets/js/50.bf1f8256.js"><link rel="prefetch" href="/blog/assets/js/51.a13612ea.js"><link rel="prefetch" href="/blog/assets/js/52.8b84ed36.js"><link rel="prefetch" href="/blog/assets/js/53.9224c766.js"><link rel="prefetch" href="/blog/assets/js/54.cb8e76d9.js"><link rel="prefetch" href="/blog/assets/js/55.ea9c8471.js"><link rel="prefetch" href="/blog/assets/js/56.041ae37f.js"><link rel="prefetch" href="/blog/assets/js/57.8f36c0a1.js"><link rel="prefetch" href="/blog/assets/js/58.8d58204d.js"><link rel="prefetch" href="/blog/assets/js/59.270f9527.js"><link rel="prefetch" href="/blog/assets/js/6.d5b7f992.js"><link rel="prefetch" href="/blog/assets/js/60.a0db7ea7.js"><link rel="prefetch" href="/blog/assets/js/61.7ecc437f.js"><link rel="prefetch" href="/blog/assets/js/62.451735c6.js"><link rel="prefetch" href="/blog/assets/js/63.7da1c072.js"><link rel="prefetch" href="/blog/assets/js/64.c69d0c37.js"><link rel="prefetch" href="/blog/assets/js/65.99854ffd.js"><link rel="prefetch" href="/blog/assets/js/66.e3672356.js"><link rel="prefetch" href="/blog/assets/js/67.89ee9582.js"><link rel="prefetch" href="/blog/assets/js/68.fcb3a6e2.js"><link rel="prefetch" href="/blog/assets/js/69.f75c9878.js"><link rel="prefetch" href="/blog/assets/js/7.feb038e6.js"><link rel="prefetch" href="/blog/assets/js/70.53926bfd.js"><link rel="prefetch" href="/blog/assets/js/71.01a17461.js"><link rel="prefetch" href="/blog/assets/js/72.addbc1be.js"><link rel="prefetch" href="/blog/assets/js/73.a4d57497.js"><link rel="prefetch" href="/blog/assets/js/74.5c9aacea.js"><link rel="prefetch" href="/blog/assets/js/75.caec8feb.js"><link rel="prefetch" href="/blog/assets/js/76.7a328c07.js"><link rel="prefetch" href="/blog/assets/js/77.74ed5331.js"><link rel="prefetch" href="/blog/assets/js/78.3c8f8e91.js"><link rel="prefetch" href="/blog/assets/js/79.0f262cba.js"><link rel="prefetch" href="/blog/assets/js/8.75e247f9.js"><link rel="prefetch" href="/blog/assets/js/80.c5307bbc.js"><link rel="prefetch" href="/blog/assets/js/81.733bc4f8.js"><link rel="prefetch" href="/blog/assets/js/82.cfde5b4a.js"><link rel="prefetch" href="/blog/assets/js/83.7b6205e7.js"><link rel="prefetch" href="/blog/assets/js/84.1a525c77.js"><link rel="prefetch" href="/blog/assets/js/85.6fd607ae.js"><link rel="prefetch" href="/blog/assets/js/86.354fab86.js"><link rel="prefetch" href="/blog/assets/js/87.6549d78e.js"><link rel="prefetch" href="/blog/assets/js/88.24897f77.js"><link rel="prefetch" href="/blog/assets/js/89.ddb34bb7.js"><link rel="prefetch" href="/blog/assets/js/9.97fe452c.js"><link rel="prefetch" href="/blog/assets/js/90.26a15279.js"><link rel="prefetch" href="/blog/assets/js/91.6a4e0f9a.js"><link rel="prefetch" href="/blog/assets/js/92.8395cb0f.js"><link rel="prefetch" href="/blog/assets/js/93.50a85a3c.js"><link rel="prefetch" href="/blog/assets/js/94.77e4c8db.js"><link rel="prefetch" href="/blog/assets/js/95.d563d2f1.js"><link rel="prefetch" href="/blog/assets/js/96.58d54dd3.js"><link rel="prefetch" href="/blog/assets/js/97.71efdc1f.js"><link rel="prefetch" href="/blog/assets/js/98.68944b0a.js"><link rel="prefetch" href="/blog/assets/js/99.b102843d.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.f7c3d84a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/bamboo.svg" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/The_Definative_Guide_of_CSS/" class="nav-link">
+  CSS 权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/CSS_Supplement/" class="nav-link">
+  CSS 补充
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/Vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/WeChat/" class="nav-link">
+  WeChat
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/backend/Explain_Profound_Theories_in_Simple_Language/" class="nav-link">
+  深入浅出 node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教课书" class="dropdown-title"><span class="title">教课书</span> <span class="arrow down"></span></button> <button type="button" aria-label="教课书" class="mobile-dropdown-title"><span class="title">教课书</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Compiling_Principle_and_Design/" class="nav-link">
+  编译原理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Software_Engineering/" class="nav-link">
+  软件工程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/The_Interest_Study_guide_of_Haskell/" class="nav-link">
+  Haskell 趣学指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Assembly_Language_and_Interface_Techniques/" class="nav-link">
+  汇编技术与接口
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Computer_Architecture/" class="nav-link">
+  计算机体系结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/tools/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/courseware/" class="nav-link">
+  课件
+</a></div><div class="nav-item"><a href="/blog/tmp/" class="nav-link">
+  编译原理实验五
+</a></div> <a href="https://github.com/a-layfolk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/The_Definative_Guide_of_CSS/" class="nav-link">
+  CSS 权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/CSS_Supplement/" class="nav-link">
+  CSS 补充
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/Vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/frontEnd/WeChat/" class="nav-link">
+  WeChat
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/backend/Explain_Profound_Theories_in_Simple_Language/" class="nav-link">
+  深入浅出 node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教课书" class="dropdown-title"><span class="title">教课书</span> <span class="arrow down"></span></button> <button type="button" aria-label="教课书" class="mobile-dropdown-title"><span class="title">教课书</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Compiling_Principle_and_Design/" class="nav-link">
+  编译原理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Software_Engineering/" class="nav-link">
+  软件工程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/The_Interest_Study_guide_of_Haskell/" class="nav-link">
+  Haskell 趣学指南
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Assembly_Language_and_Interface_Techniques/" class="nav-link">
+  汇编技术与接口
+</a></li><li class="dropdown-item"><!----> <a href="/blog/note/textbook/Computer_Architecture/" class="nav-link">
+  计算机体系结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/note/tools/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/courseware/" class="nav-link">
+  课件
+</a></div><div class="nav-item"><a href="/blog/tmp/" class="nav-link">
+  编译原理实验五
+</a></div> <a href="https://github.com/a-layfolk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/blog/homework/Compiling_Principle_and_Design/" aria-current="page" class="sidebar-link">编译原理与设计实验</a></li><li><a href="/blog/homework/Compiling_Principle_and_Design/Lab1.html" class="sidebar-link">Lab 1. 程序设计语言认知实验</a></li><li><a href="/blog/homework/Compiling_Principle_and_Design/Lab2.html" class="sidebar-link">Lab 2. 编译器认知实验</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="lab5-语法分析实验"><a href="#lab5-语法分析实验" class="header-anchor">#</a> Lab5 语法分析实验</h1> <h2 id="_1-实验目的和内容"><a href="#_1-实验目的和内容" class="header-anchor">#</a> 1. 实验目的和内容</h2> <p><strong>实验目的</strong>：</p> <ul><li>熟悉 C 语言的语法规则，了解编译器语法分析器的主要功能</li> <li>熟练掌握典型语法分析器构造的相关技术和方法，设计并实现具有一定复杂度和分析能力的 C 语言语法分析器</li> <li>了解 ANTLR 的工作原理和基本思想，学习使用工具自动生成语法分析器</li> <li>掌握编译器从前端到后端各个模块的工作原理，语法分析模块与其他模块之间的交互过程</li></ul> <p><strong>实验内容</strong>：</p> <ul><li>选择 C 语言的一个子集，基于 BIT-MiniCC 构建 C 语言子集的语法分析器</li> <li>该语法分析器能够在输入正确时输出 JSON 格式的语法树</li></ul> <h2 id="_2-实验具体过程和步骤"><a href="#_2-实验具体过程和步骤" class="header-anchor">#</a> 2. 实验具体过程和步骤</h2> <p><strong>实验具体步骤</strong>：</p> <ul><li>参照给出的文法，扩充定义自己希望实现的 C 语言语法子集</li> <li>使用 ANTLR 自动生成语法分析器</li> <li>将语法树输出为 JSON 文件</li></ul> <h3 id="_2-1-扩充文法"><a href="#_2-1-扩充文法" class="header-anchor">#</a> 2.1 扩充文法</h3> <p>使用 ANTLR，相当于同时使用 Flex 和 Bison，需要同时给出词法规则和语法规则</p> <p>Lab4 时，我已完成 C 语言绝大部分的文法，但若将这些文法全部用到 Lab5 中，太过繁琐和臃肿</p> <p>所以下面给出的文法，是在前几个实验基础上简化过的文法</p> <p>虽然简化，但仍包括：</p> <ul><li>声明语句</li> <li>赋值语句</li> <li>分支语句</li> <li>循环语句</li> <li>返回语句</li></ul> <p>即</p> <p><strong>由于一次性给出全部文法较为复杂，下面拆分为几部分给出文法</strong></p> <h4 id="_2-1-1-声明语句"><a href="#_2-1-1-声明语句" class="header-anchor">#</a> 2.1.1 声明语句</h4> <p>出于简单起见，给出的声明中，并没有包括数组、结构体、枚举、联合和指针</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/* 语法分析 */</span>
+<span class="token comment">// 声明语句 , 包括变量声明语句 和 函数声明语句</span>
+declaration     <span class="token operator">:</span>   var_declaration
+                <span class="token operator">|</span>   fun_declaration
+                <span class="token punctuation">;</span>
+
+<span class="token comment">// 变量声明语句 , 例如 int a;</span>
+var_declaration <span class="token operator">:</span>   type_specifier IDENTIFIER <span class="token string">';'</span><span class="token punctuation">;</span>
+<span class="token comment">// 函数声明语句 , 例如 int sum(int a, int b);</span>
+fun_declaration <span class="token operator">:</span>   type_specifier IDENTIFIER <span class="token string">'('</span> params <span class="token string">')'</span> <span class="token string">';'</span><span class="token punctuation">;</span>
+<span class="token comment">// 类型修饰符</span>
+type_specifier  <span class="token operator">:</span>   <span class="token string">'char'</span>
+                <span class="token operator">|</span>   <span class="token string">'double'</span>
+                <span class="token operator">|</span>   <span class="token string">'float'</span>
+                <span class="token operator">|</span>   <span class="token string">'int'</span>
+                <span class="token operator">|</span>   <span class="token string">'long'</span>
+                <span class="token operator">|</span>   <span class="token string">'short'</span>
+                <span class="token operator">|</span>   <span class="token string">'signed'</span>
+                <span class="token operator">|</span>   <span class="token string">'unsigned'</span>
+                <span class="token operator">|</span>   <span class="token string">'void'</span>
+                <span class="token punctuation">;</span>
+<span class="token comment">// 函数参数 , 包括有参数和 void</span>
+params  <span class="token operator">:</span>   params_list
+        <span class="token operator">|</span>   <span class="token string">'void'</span>
+        <span class="token punctuation">;</span>
+<span class="token comment">// 有参数的情 , 包括只有一个参数 和 含有多个参数</span>
+params_list <span class="token operator">:</span>   type_specifier IDENTIFIER
+            <span class="token operator">|</span>   params_list <span class="token string">','</span> type_specifier IDENTIFIER
+            <span class="token punctuation">;</span>
+
+<span class="token comment">/* 词法分析 */</span>
+IDENTIFIER  <span class="token operator">:</span>   <span class="token punctuation">[</span>a<span class="token operator">-</span>zA<span class="token operator">-</span>Z_<span class="token punctuation">]</span><span class="token punctuation">[</span>a<span class="token operator">-</span>zA<span class="token operator">-</span>Z0<span class="token operator">-</span><span class="token number">9_</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">;</span>
+WS	        <span class="token operator">:</span>   <span class="token punctuation">[</span> \t\r\n<span class="token punctuation">]</span><span class="token operator">+</span> <span class="token operator">-&gt;</span> skip<span class="token punctuation">;</span>
+</code></pre></div><h4 id="_2-1-2-表达式语句"><a href="#_2-1-2-表达式语句" class="header-anchor">#</a> 2.1.2 表达式语句</h4> <p>直接给出赋值语句的文法比较困难，因为赋值语句包括多种情况，所以我们先给出表达式语句，再根据表达式语句给出赋值语句</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/* 语法分析 */</span>
+<span class="token comment">// 表达式语句 , 包括算术运算 和 比较运算</span>
+expression_stmt <span class="token operator">:</span>   expression <span class="token string">';'</span><span class="token punctuation">;</span>
+expression  <span class="token operator">:</span>   arithmetic_expression
+            <span class="token operator">|</span>   arithmetic_expression com_op arithmetic_expression
+            <span class="token punctuation">;</span>
+<span class="token comment">// 算术表达式语句 ， 包括加减运算 和 乘除运算</span>
+arithmetic_expression   <span class="token operator">:</span>   add_sub_expression
+                        <span class="token operator">|</span>   mul_div_expression
+                        <span class="token punctuation">;</span>
+<span class="token comment">// 加减运算</span>
+<span class="token comment">// 为防止 加减运算 和 乘除运算相互左递归</span>
+<span class="token comment">// 乘除运算 、 加减运算均有时</span>
+<span class="token comment">// 归于 加减运算</span>
+add_sub_expression  <span class="token operator">:</span>   factor
+                    <span class="token operator">|</span>   factor add_sub_op add_sub_expression
+                    <span class="token operator">|</span>   add_sub_expression add_sub_op factor
+                    <span class="token operator">|</span>   factor add_sub_op mul_div_expression
+                    <span class="token operator">|</span>   mul_div_expression add_sub_op factor
+                    <span class="token punctuation">;</span>
+<span class="token comment">// 乘除运算</span>
+mul_div_expression  <span class="token operator">:</span>   factor
+                    <span class="token operator">|</span>  factor mul_div_op mul_div_expression
+                    <span class="token operator">|</span>  mul_div_expression mul_div_op factor
+                    <span class="token punctuation">;</span>
+<span class="token comment">// 运算时的每一项 , 可能时整数、浮点数、变量、表达式</span>
+factor  <span class="token operator">:</span>   integer_constant
+        <span class="token operator">|</span>   floating_constant
+        <span class="token operator">|</span>   <span class="token keyword">var</span>
+        <span class="token operator">|</span>   <span class="token string">'('</span>expression<span class="token string">')'</span>
+        <span class="token punctuation">;</span>
+add_sub_op  <span class="token operator">:</span>   <span class="token string">'+'</span>
+            <span class="token operator">|</span>   <span class="token string">'-'</span>
+            <span class="token punctuation">;</span>
+mul_div_op  <span class="token operator">:</span>   <span class="token string">'*'</span>
+            <span class="token operator">|</span>   <span class="token string">'/'</span>
+            <span class="token punctuation">;</span>
+com_op  <span class="token operator">:</span>   <span class="token string">'&lt;='</span>
+        <span class="token operator">|</span>   <span class="token string">'&lt;'</span>
+        <span class="token operator">|</span>   <span class="token string">'&gt;'</span>
+        <span class="token operator">|</span>   <span class="token string">'&gt;='</span>
+        <span class="token operator">|</span>   <span class="token string">'=='</span>
+        <span class="token operator">|</span>   <span class="token string">'!='</span>
+        <span class="token punctuation">;</span>
+integer_constant    <span class="token operator">:</span>   INTEGER_CONSTANT<span class="token punctuation">;</span>
+floating_constant   <span class="token operator">:</span>   FLOATING_CONSTANT<span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token operator">:</span>   IDENTIFIER<span class="token punctuation">;</span>
+<span class="token comment">/* 词法分析 */</span>
+<span class="token comment">// 为简单起见 , 整数只包括十进制整数 , 没有前缀和后缀</span>
+INTEGER_CONSTANT    <span class="token operator">:</span>   <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token comment">// 为简单器件 , 浮点数也只包括十进制浮点数 , 没有前缀和后缀</span>
+FLOATING_CONSTANT   <span class="token operator">:</span>   <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token string">'.'</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">;</span>
+IDENTIFIER  <span class="token operator">:</span>   <span class="token punctuation">[</span>a<span class="token operator">-</span>zA<span class="token operator">-</span>Z_<span class="token punctuation">]</span><span class="token punctuation">[</span>a<span class="token operator">-</span>zA<span class="token operator">-</span>Z0<span class="token operator">-</span><span class="token number">9_</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="_2-1-3-赋值语句"><a href="#_2-1-3-赋值语句" class="header-anchor">#</a> 2.1.3 赋值语句</h4> <p>有了表达式语句之后，赋值语句便非常简单了</p> <div class="language-java extra-class"><pre class="language-java"><code>assignment_stmt <span class="token operator">:</span>   <span class="token keyword">var</span> ass_op expression <span class="token string">';'</span><span class="token punctuation">;</span>
+ass_op  <span class="token operator">:</span>   <span class="token string">'='</span>
+        <span class="token operator">|</span>   <span class="token string">'+='</span>
+        <span class="token operator">|</span>   <span class="token string">'-='</span>
+        <span class="token operator">|</span>   <span class="token string">'*='</span>
+        <span class="token operator">|</span>   <span class="token string">'/='</span>
+        <span class="token operator">|</span>   <span class="token string">'%='</span>
+        <span class="token operator">|</span>   <span class="token string">'&lt;&lt;='</span>
+        <span class="token punctuation">;</span>
+</code></pre></div><h4 id="_2-1-4-分支语句"><a href="#_2-1-4-分支语句" class="header-anchor">#</a> 2.1.4 分支语句</h4> <div class="language-java extra-class"><pre class="language-java"><code>
+</code></pre></div><h2 id="_3-运行效果截图"><a href="#_3-运行效果截图" class="header-anchor">#</a> 3. 运行效果截图</h2> <h2 id="_4-实验心得体会"><a href="#_4-实验心得体会" class="header-anchor">#</a> 4. 实验心得体会</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.59039e4d.js" defer></script><script src="/blog/assets/js/2.70981f31.js" defer></script><script src="/blog/assets/js/38.249cd003.js" defer></script>
+  </body>
+</html>
